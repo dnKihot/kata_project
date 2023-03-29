@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "TT Lakes";
+  font-style: normal;
+  src: url("fonts/TTLakes-Medium.woff"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+body {
+  font-family: "TT Lakes", "Arial", sans-serif;
+}
+
+/* ////////////RESET////////////////////////////// */
+
+*, *::after, ::before {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+ul,
+ol {
+  font-size: calc(1rem + 2px);
+  color: #7E7E82;
+  list-style: none;
+  margin: 0;
+}
+html {font-size: 14px;}
+h1 {font-size: 2rem;}
+p {font-size: 1rem;}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: calc(1rem + 2px);
+  border-bottom: 1px solid transparent;
+}
+button:hover {
+  border-bottom: 1px solid blue;
+}
+
+/* ///////////////////ELEMS/////////////////////// */
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius:50%; 
+  cursor: pointer;
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 16px;
+}
+
+.icon1 {
+  background-image: url(img/menu.svg);
+}
+.icon2 {
+  background-image: url(img/phone.svg);
+}
+.icon3 {
+  background-image: url(img/message.svg);
+}
+.icon4 {
+  background-image: url(img/Group3.png);
+}
+.icon5 {
+  background-image: url(img/keys.svg);
+}
+.icon6 {
+  background-image: url(img/search.svg);
+
+}
+
+.grey-line {
+  width: 2px;
+  height: 32px;
+  background-color: #EAEAEA;
+}
+
+/* ///////DISPLAY NONE (MOBILE)/////////// */
+
+.header__left-side .grey-line:nth-child(2){display: none;}
+.header__contact-list {display: none;}
+.header__right-side .grey-line {display: none;} 
+.servises .header__servise {display: none;}
+.reviews {display: none;}
+.about__second-p {display: none;}  
+
+
+/* //////////////HEADER//////////////////// */
+
+header {
+  width: 100%;
+  height: 88px;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.header__logo {
+  background-image: url(img/Group.svg);
+  width: 96px;
+  height: 50px; 
+  margin-right: 16px;
+}
+.header__left-side {
+  display: flex;
+  align-items: center;
+
+}
+.header__left-side .grey-line {
+  margin-right: 20px;
+}
+
+.header__right-side .grey-line {
+  margin-right: 20px;
+}
+
+.header__right-side,
+.header__servise {
+  display: flex;
+}
+
+
+
+/* //////////////MAIN//////////////////// */
+main {
+  padding: 24px 16px;
+  background-color: #F8F8F8;
+
+}
+
+h1 {
+  margin-bottom: 24px;
+}
+h1::before {
+  content: " ";
+  width: 4px;
+  height: 40px;
+  background-color: #41F6D7;;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 50px;
+}
+li {
+  background-color: #fff;
+  width: 248px;
+  height: 40px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 6px;
+  margin-right: 10px;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  padding: 0 8px;
+}
+
+li:hover, li:focus {
+  border-color:  #B8FFEC;
+  cursor: pointer;
+  transition-delay: .6s;
+}
+.reviews {
+  color: #7E7E82;
+  margin-top: 15px;
+  margin-left: 56px;
+  margin-bottom: 19px;
+}
+.about {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about__text-area {
+  margin-top: 24px;
+}
+
+.about__image-area {
+  margin-top: 15px;
+  background-image: url(img/mobile-pic.png);
+  width: 100%;
+  height: 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.about__read {
+  margin-top: 16px;
+  margin-left: 48px;
+}
+
+/* ////////////MEDIA/////////////////// */
+
+@media (min-width: 767px) {
+  .header__left-side .grey-line:nth-child(2){display: block;}
+  .header__left-side .grey-line{display: none;}
+  .header__contact-list {display: flex;}
+  .header__right-side .grey-line {display: block;} 
+
+  /* ////////////////////////////// */
+
+  .about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+  .about__text-area {
+ 
+    display: flex;
+    
+  }
+  .about__text-area,.about__image-area {
+    width: 45%;
+  }
+  .about__text-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__second-p {display: block; overflow-y: hidden;}   
+
+  .about__read {
+    max-width: 150px;
+  }
+
+  .about__image-area {
+ 
+    background-image: url(img/tablet-pic.png);
+    height: 210px;
+    border-radius: 5px;
+  }
+
+} 
+
+@media (min-width: 1119px) {
+  .header {display: none;}
+  
+  main {
+    padding-top: 42px;
+  } 
+  .services__flex-line {
+    display: flex; 
+    justify-content: space-between;
+  }
+  .servises .header__servise {display: flex;}
+  
+  .icon5 {margin-right: 140px;}
+  
+  .icon5::before, .icon6::before {  
+    white-space: nowrap;
+    position: relative;
+    right: 120px; 
+    top: 10px;
+  }
+  .icon5::before {
+    content: "Оставить заявку";
+  }
+  .icon6::before {
+    content: "Статус ремонта";
+  }
+  .reviews {display: block;}
+
+  .about__image-area {
+    background-image: url(img/desctop-pic.png);
+    height: 310px;
+    border-radius: 5px !important;
+  }
+
+
+}
+
+
