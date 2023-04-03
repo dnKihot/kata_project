@@ -11,24 +11,23 @@
   <header class="header">
     
     <div class="header__left-side">
-      <div class=" icon icon1"></div>
-      <span class="grey-line"></span>
+      <button class=" icon icon1"></button>
       <div class="header__logo"></div>
-      <span class="grey-line"></span>
     </div>
     
     <div class="header__right-side">
       <div class="header__contact-list">
-        <div class="icon icon2"></div>
-        <div class="icon icon3"></div>
-        <div class="icon icon4"></div>
+        <button class="icon icon2"></button>
+        <button class="icon icon3"></button>
+        <button class="icon icon4"></button>
       </div>
       
-      <div class="grey-line"></div>
+      <!-- <div class="grey-line"></div> -->
       
       <div class="header__servise">
-        <div class="icon icon5"></div>
-        <div class="icon icon6"></div>
+        
+        <button class="icon icon5"></button>
+        <button class="icon icon6"></button>
         
       </div>
     </div>
@@ -36,40 +35,60 @@
   </header>
   <main>
     
-    <section class="servises">
+    <header class="servises">
       <div class="services__flex-line">
         <h1>Услуги и сервисы</h1>
         <div class="header__servise">
-          <div class="icon icon5"></div>
-          <div class="icon icon6"></div>
+          <p>Оставить заявку</p>
+          <button class="icon icon5"></button>
+          <p>Статус ремонта</p>
+          <button class="icon icon6"></button>
         </div>
       </div>
       
-      <ul>
-        <li>Ремонтируемые бренды</li>
-        <li>Ремонтируемые устройства</li>
-        <li>Цены на услуги</li>
-        <li>Адреса сервисных центров</li>
-        <li>Специальные цены</li>
-      </ul>
-    </section>
+      <nav>  
+        <menu>
+          <li><a href="#">Ремонтируемые бренды</a></li>
+          <li><a href="#">Ремонтируемые устройства</a></li>
+          <li><a href="#">Цены на услуги</a></li>
+          <li><a href="#">Адреса сервисных центров</a></li>
+          <li><a href="#">Специальные цены</a></li>
+        </menu>
+        <button class="reviews">Отзывы</button>
+      </nav>  
     
-    <button class="reviews">Отзывы</button>
+    </header>
     
-    <section class="about">
+
+    
+    <article class="about">
       
       <div class="about__text-area">
+        
         <p class="about__firts-p">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
         
-        <br>
-        
+
+ 
         <p class="about__second-p">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
         
-        <button class="about__read">Читать далее</button>
+        <div class="about__unwrap">
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <button class="about__read">Читать далее</button>
+        </div>  
       </div>
       
-      <div class="about__image-area"></div>
-    </section>
+      <div class="about__image-area">
+        
+        <img src="img/mobile-pic.png" alt="company name" class="about__image-picture-mob">
+        
+        <img src="img/tablet-pic.png" alt="company name" class="about__image-picture-tab">
+        
+        <img src="img/desctop-pic.png" alt="company name" class="about__image-picture-desc">
+      
+      </div>
+    
+    </article>
   </main>
 
 
